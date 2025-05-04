@@ -1,45 +1,20 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PoopDL Downloader</title>
+  <meta charset="UTF-8">
+  <title>PoopDL Downloader - Mini App</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="bg-light">
-  <div class="container py-5">
-    <div class="text-center mb-5">
-      <h1 class="display-4 mb-3">PoopDL Downloader</h1>
-      <p class="lead">Simple download solution</p>
-    </div>
-
-    <div class="d-flex justify-content-center gap-3 flex-wrap">
-      <button id="btnPoopDL" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#iframeModal">
-        Open PoopDL
-      </button>
-      <button id="btnYoutube" class="btn btn-danger btn-lg" data-bs-toggle="modal" data-bs-target="#iframeModal">
-        Open YouTube
-      </button>
-    </div>
-
-    <!-- Modal Fullscreen -->
-    <div class="modal fade" id="iframeModal" tabindex="-1" aria-hidden="true">
-      <div class="modal-dialog modal-fullscreen">
-        <div class="modal-content">
-          <div class="modal-header">
-            <h5 class="modal-title" id="modalTitle">Loading...</h5>
-            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-          </div>
-          <div class="modal-body p-0">
-            <iframe id="dynamicIframe" src="" allowfullscreen></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
+<body>
+  <div class="button-container">
+    <button id="btnPoopDL" class="active">PoopDL</button>
+    <button id="btnYoutube">YouTube</button>
   </div>
+  
+  <iframe id="contentFrame" src="https://poopdl.dapuntaratya.com/" allowfullscreen></iframe>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js"></script>
   <script src="scripts.js"></script>
 </body>
 </html>
